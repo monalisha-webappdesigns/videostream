@@ -1,0 +1,31 @@
+doctype html(lang='en')
+head
+	meta(charset='utf-8')
+	meta(http-equiv='X-UA-Compatible', content='IE=edge')
+	meta(name='viewport', content='width=device-width, initial-scale=1')
+	title #{title} - title Video Streaming
+	link(rel='stylesheet', href='/css/flexslider.css')
+	link(rel='stylesheet', href='/css/font-awesome.min.css')
+	link(rel='stylesheet', href='/css/bootstrap.min.css')
+	link(rel='stylesheet', href='/css/style.css')
+	link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css')
+body
+	.login
+		.login-content
+			.logo-head
+				img(src='images/logo.png')
+			.logo-body
+				include partials/flash
+				block content
+			.logo-footer
+				h4.font-xm 2017 &copy; YantraTV
+	block scripts
+	script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+	script(src='/js/jquery.min.js')
+	script(src='/js/bootstrap.min.js')
+	script(src='/js/jquery.flexslider.js')
+	script(src='/js/shCore.js')
+	script(src='/js/shBrushXml.js')
+	script(src='/js/shBrushJScript.js')
+	script(src='/js/custom.js')
+	script(src='/js/main.js')

@@ -1,0 +1,25 @@
+extends ../layoutlogin
+
+block content
+	h2 Login to your account
+	h6.font-xs Fields with * are required 
+	form(method='post')
+		.form-group.username
+			.cols-sm-12
+				.input-group
+					span.input-group-addon
+						i.fa.fa-user.fa(aria-hidden='true')
+					input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
+					input(type='hidden', name='_csrf', value=_csrf)
+		.form-group.Password
+			.cols-sm-12
+				.input-group
+					span.input-group-addon
+						i.fa.fa-lock.fa-lg(aria-hidden='true')
+					input.form-control(type='password', name='password', id='password', placeholder='Password', required)
+		.form-group
+			.login-box
+				button.login-btn(type='submit') Login
+		.form-group
+			.login-box
+				a.btn.btn-link(href='/forgot') Forgot your password?

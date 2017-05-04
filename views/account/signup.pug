@@ -1,0 +1,28 @@
+extends ../layoutlogin
+
+block content
+	h2 Register
+	h6.font-xs Fields with * are required 
+	form(id='signup-form',method='post')
+		.form-group
+			.cols-sm-12
+				input.form-control(type='text', name='name', id='name', placeholder='Name', autofocus='')
+				input(type='hidden', name='_csrf', value=_csrf)
+		.form-group
+			.cols-sm-12
+				input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus='', required)
+		.form-group
+			.cols-sm-12
+				input.form-control(type='text', name='user_name', id='user_name', placeholder='User Name')
+		.form-group
+			.cols-sm-12
+				input.form-control(type='password', name='password', autofocus='', id='password', placeholder='Password', required)
+		.form-group
+			.cols-sm-12
+				input.form-control(type='password', name='confirmPassword', autofocus='', id='confirmPassword', placeholder='Confirm Password', required)
+		.form-group
+			.cols-sm-12
+				input.form-control(type='number', name='telephoneno', id='telephoneno', autofocus='', placeholder='Contact No', required)
+		.form-group
+			.login-box
+				button.login-btn(type='submit') Register
